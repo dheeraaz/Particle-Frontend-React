@@ -1,8 +1,8 @@
-import About from './About/Pages/About.jsx'
 import Home from './Home/Pages/Home.jsx'
+import Gallery from './Gallery/Pages/Gallery.jsx'
 
 
 export {
     Home, 
-    About,
+    Gallery,
 }

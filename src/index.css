@@ -6,9 +6,9 @@
 
 @layer base{
   body{
-    @apply font-inter;
+    @apply font-inter bg-bodycolor;
   }
-  .container{
-        @apply max-w-7xl mx-auto;
+  .contaiiner{
+        @apply max-w-7xl mx-auto md:px-2 md:py-1;
     }
 }
