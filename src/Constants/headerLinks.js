@@ -1,34 +1,34 @@
 import { Home, Gallery} from '../Modules/index.js';
 
-export const HeaderLinks = [
+export const headerLinks = [
     {
         "id": 1,
-        "name": "HOME",
+        "name": "home",
         "component": Home,
         "path": ''
     },
     {
         "id": 2,
-        "name": "GALLERY",
+        "name": "gallery",
         "component": Gallery,
         "path": '/gallery'
     },
     
     {
         "id": 3,
-        "name": "INFORMATION",
+        "name": "information",
         "component": Home,
         "path": '/information'
     },
     {
         "id": 4,
-        "name": "HOW IT WORKS",
+        "name": "how it works",
         "component": Gallery,
         "path": '/howitworks'
     },
     {
         "id": 5,
-        "name": "HELP",
+        "name": "help",
         "component": Home,
         "path": '/help'
     },

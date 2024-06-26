@@ -4,11 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* For applying custom css */
 @layer base{
   body{
-    @apply font-inter bg-bodycolor;
+    @apply font-body bg-bodycolor;
+  } 
+
+  .flexVerCenter{
+    @apply flex items-center;
   }
-  .contaiiner{
-        @apply max-w-7xl mx-auto md:px-2 md:py-1;
-    }
+
+  .footerLinks{
+    @apply text-graytext text-sm font-normal;
+  }
+
+  .footerHeadings{
+    @apply text-[#F2F2F2] text-lg font-medium;
+  }
+}
+/* This one overrides the tailwind classes */
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto md:px-2 md:py-1;
+  }
 }

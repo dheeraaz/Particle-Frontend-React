@@ -9,7 +9,7 @@ export default {
       screens: {
         '2xl': {'max': '1536px'},
         // => @media (max-width: 1536px) { ... }
-  
+
         'xl': {'max': '1280px'},
         'lg': {'max': '1024px'},
         'md': {'max': '768px'},
@@ -24,8 +24,8 @@ export default {
 
       },
       fontFamily:{
-        'poppins': ['Poppins', 'sans-serif'],
-        'inter': ['Inter', 'sans-serif'],
+        'links': ['Poppins', 'sans-serif'],
+        'body': ['Inter', 'sans-serif'],
       },
       colors:{
         'bodycolor': '#EBEEF0',
@@ -33,7 +33,7 @@ export default {
         'secondary': '#383462',
         'accent': '#FE553E',
         'textcolor': "#050315",
-        'secfooter': "#1B1B1B",
+        'secFooter': "#1B1B1B",
         'graytext': "#E0E0E0",
       },
     },
