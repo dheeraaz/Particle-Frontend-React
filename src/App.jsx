@@ -1,8 +1,8 @@
 import React from "react"
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom"
 import AppLayout from "./Layouts/AppLayout"
-import { Home } from "./Modules"
 import { HeaderLinks } from "./Constants/HeaderLinks.jsx"
+import './i18n.js'
 
 const myRouter = createBrowserRouter(
   createRoutesFromElements(
