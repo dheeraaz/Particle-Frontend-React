@@ -7,7 +7,7 @@
 /* For applying custom css */
 @layer base{
   body{
-    @apply font-body bg-bodycolor;
+    @apply font-body bg-bodyColor;
   } 
 
   .flexVerCenter{
@@ -15,7 +15,7 @@
   }
 
   .footerLinks{
-    @apply text-graytext text-sm font-normal;
+    @apply text-grayText text-sm font-normal transition-all ease-in hover:text-white;
   }
 
   .footerHeadings{
