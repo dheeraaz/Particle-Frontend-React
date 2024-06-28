@@ -5,7 +5,7 @@ const Logo = () => {
   return (
     <div>
       <NavLink to='' >
-        <img src="./images/Logo-Full.svg" alt="particle logo" />
+        <img src="./images/Logo-Full.svg" alt="particle logo" className='max-w-[120px] xl:max-w-[98px] aspect-auto' />
       </NavLink>
     </div>
   )

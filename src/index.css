@@ -7,7 +7,7 @@
 /* For applying custom css */
 @layer base{
   body{
-    @apply font-body bg-bodyColor;
+    @apply font-body bg-bodyColor overflow-x-hidden w-screen h-screen;
   } 
 
   .flexVerCenter{
@@ -15,16 +15,16 @@
   }
 
   .footerLinks{
-    @apply text-grayText text-sm font-normal transition-all ease-in hover:text-white;
+    @apply text-grayText text-sm xl:text-xs lg:text-[10px] font-normal transition-all ease-in hover:text-white ;
   }
 
   .footerHeadings{
-    @apply text-[#F2F2F2] text-lg font-medium;
+    @apply text-[#F2F2F2] text-lg xl:text-base lg:text-sm font-medium whitespace-nowrap;
   }
 }
 /* This one overrides the tailwind classes */
 @layer utilities {
   .container {
-    @apply max-w-7xl mx-auto md:px-2 md:py-1;
+    @apply max-w-7xl w-[96%] mx-auto xl:max-w-[1160px] lg:max-w-[924px] md:px-2 md:py-1;
   }
 }

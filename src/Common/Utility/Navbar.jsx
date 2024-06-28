@@ -9,7 +9,7 @@ const MyNavlinksCallback = ({ isActive }) => {
 const Navbar = () => {
   return (
     <nav>
-      <div className='font-links flex gap-5 font-medium text-base md:hidden'>
+      <div className='font-links flex gap-5 xl:gap-4 lg:gap-3 font-medium text-base xl:text-sm lg:text-xs md:hidden'>
         {
           // Navbar link and route are imported from ./Constants/headerLinks.js
           // configuring ./Constants/headerLinks.js file will automatically sets the route, Navbar link
