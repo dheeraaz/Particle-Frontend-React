@@ -1,5 +1,5 @@
 export function capitalizeSentences(input) {
-    if (!input) return input; // Handle empty or null input
+    if (!input) return ''; // Handle empty or null input | returns empty string for falsy values
 
     // Split the input based on full-stops, question marks and exclamation sign
     let sentences = input.split(/([.?!])/);
@@ -20,8 +20,9 @@ export function capitalizeSentences(input) {
     return sentences.join('');
 }
 
+
 export function capitalizeWords(input) {
-    if (!input) return input; // Handle empty or null input
+    if (!input) return ''; // Handle empty or null input | returns empty string for falsy values
 
     // Split the input based on spaces
     let words = input.split(" ");
@@ -29,12 +30,8 @@ export function capitalizeWords(input) {
     // Iterate through the sentences array and capitalize the first letter of each words
     for (let i = 0; i < words.length; i++) {
         words[i] = words[i].trim().charAt(0).toUpperCase() + words[i].slice(1);
-        // adds spaces before every words
-        if (i !== 0) {
-            words[i] = " " + words[i];
-        }
     }
 
-    // Join the words back together
-    return words.join('');
+    // Join the words back together by adding spaces in between 
+    return words.join(' ');
 }

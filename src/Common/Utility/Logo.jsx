@@ -3,11 +3,12 @@ import { NavLink } from 'react-router-dom'
 
 const Logo = () => {
   return (
-    <div>
-      <NavLink to='' >
-        <img src="./images/Logo-Full.svg" alt="particle logo" className='max-w-[120px] xl:max-w-[98px] aspect-auto' />
-      </NavLink>
-    </div>
+    <NavLink to='' >
+      <div className='flex gap-1 items-end'>
+        <img src="./images/Logo-Full.svg" alt="particle logo" className='max-w-[28px] xl:max-w-[24px] aspect-auto' />
+        <h1 className='text-bodyColor font-links font-medium text-xl'>Particle</h1>
+      </div>
+    </NavLink>
   )
 }
 

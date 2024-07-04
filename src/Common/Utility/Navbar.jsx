@@ -3,7 +3,7 @@ import { headerLinks } from '../../Constants/headerLinks.js'
 import { NavLink } from 'react-router-dom'
 
 const MyNavlinksCallback = ({ isActive }) => {
-  return ` hover:text-accent ${isActive ? "text-accent" : "text-primary"}`
+  return ` hover:text-accent ${isActive ? "text-accent" : "text-bodyColor"}`
 }
 
 const Navbar = () => {

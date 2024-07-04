@@ -9,7 +9,7 @@ const AppLayout = () => {
     // flex-grow in main content making main content to take all available space pushing footer to bottom of page
     <div className='min-h-screen flex flex-col'>
         <Header />
-        <main className='container flex-grow w-full'>
+        <main className='flex-grow w-full'>
           {/* This section is dynamic, changes according to route */}
             <Outlet />
         </main>

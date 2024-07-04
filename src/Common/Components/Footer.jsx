@@ -53,7 +53,7 @@ const Footer = () => {
       <div className='bg-secFooter'>
         <div className='container flexVerCenter justify-between py-[13px]'>
           <div className="left text-[#BDBDBD] text-sm xl:text-xs lg:text-[10px] font-normal">
-            © 2023 Particle | All Rights Reserved
+            {capitalizeWords('© 2023 particle | all rights reserved')}
           </div>
           <SocialLinks />
         </div>
