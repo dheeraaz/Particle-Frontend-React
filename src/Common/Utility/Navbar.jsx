@@ -1,5 +1,5 @@
 import React from 'react'
-import { headerLinks } from '../../Constants/headerLinks.js'
+import { navLinks } from '../../Constants/navLinks.js'
 import { NavLink } from 'react-router-dom'
 
 const MyNavlinksCallback = ({ isActive }) => {
@@ -11,9 +11,9 @@ const Navbar = () => {
     <nav>
       <div className='font-links flex gap-5 xl:gap-4 lg:gap-3 font-medium text-base xl:text-sm lg:text-xs md:hidden'>
         {
-          // Navbar link and route are imported from ./Constants/headerLinks.js
-          // configuring ./Constants/headerLinks.js file will automatically sets the route, Navbar link
-          headerLinks.map((item)=>{
+          // Navbar link are imported from ./Constants/navLinks.js
+          // configuring ./Constants/navLinks.js file will automatically sets Navbar link
+          navLinks.map((item)=>{
             return <NavLink key ={item.id} to={item.path} className={MyNavlinksCallback}>{item.name.toUpperCase()}</NavLink>
           })
         }

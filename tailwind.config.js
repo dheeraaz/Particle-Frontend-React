@@ -18,6 +18,8 @@ export default {
         'textColor': "#050315",
         'secFooter': "#1B1B1B",
         'grayText': "#E0E0E0",
+        'extraLightText': "rgba(0, 0, 0, 0.60)",
+        'hrLineBg':"rgba(37, 34, 65, 0.25)",
       },
     },
     screens: {

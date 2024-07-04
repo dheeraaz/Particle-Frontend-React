@@ -6,7 +6,7 @@ const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
 
   function handleScroll() {
-    if(window.scrollY > 220){
+    if(window.scrollY > 120){
       setIsScroll(true);
     }else{
       setIsScroll(false)
@@ -22,7 +22,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`h-24 flex items-center bg-primary transition-all ease-in ${isScroll?('sticky top-0 shadow-lg'):('')}`}>
+    <header className={`flex items-center bg-primary transition-all ease-in ${isScroll?(' h-14 sticky top-0 shadow-lg'):('h-24')}`}>
       <div className='container flexVerCenter justify-between'>
         <Logo />
         <Navbar />

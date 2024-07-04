@@ -1,6 +1,5 @@
 import React from 'react'
-import Header from '../Common/Components/Header.jsx'
-import Footer from '../Common/Components/Footer.jsx'
+import {Header, Footer} from '../Common/Components'
 import { Outlet } from 'react-router-dom'
 
 const AppLayout = () => {
