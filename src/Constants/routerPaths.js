@@ -1,4 +1,4 @@
-import { Home, Blogs, Papers, Articles, AOI, Contact } from '../Modules/index.js';
+import { Home, Blogs,BlogPage, Papers, Articles, AOI, Contact } from '../Modules/index.js';
 
 export const routerPaths = [
     {
@@ -13,7 +13,12 @@ export const routerPaths = [
         "path": '/blogs',
         "component": Blogs,
     },
-
+    {
+        "id": 2.1,
+        "name": "blogPage",
+        "path": '/blogs/:blogId',
+        "component": BlogPage,
+    },
     {
         "id": 3,
         "name": "papers",
@@ -38,5 +43,6 @@ export const routerPaths = [
         "path": '/contact',
         "component": Contact,
     },
+    
 
 ];

@@ -3,7 +3,9 @@ import { capitalizeWords } from '../HelperFunctions/capitalize'
 import { Link } from 'react-router-dom'
 
 
-const BlogCard = ({title,imageSrc, date, cardExcerpt, cardRoute}) => {
+const BlogCard = (props) => {
+  const {title,imageSrc, date, cardExcerpt, cardRoute} = props;
+  
   return (
     <div className='cardShadow w-[400px] pb-[18px] bg-bodyColor rounded-lg'>
       <img src={imageSrc} alt="React_Image" className=' w-full object-cover rounded-lg' />

@@ -4,6 +4,7 @@ import Papers from './Papers/Pages/Papers.jsx'
 import Articles from './Articles/Pages/Articles.jsx'
 import AOI from './AOI/Pages/AOI.jsx'
 import Contact from './Contact/Pages/Contact.jsx'
+import BlogPage from './BlogPage/Pages/BlogPage.jsx'
 
 
 export {
@@ -12,5 +13,6 @@ export {
     Papers,
     Articles,
     AOI,
-    Contact
+    Contact,
+    BlogPage,
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
 import RecentBlogs from '../Components/RecentBlogs';
 import HeroSection from '../Components/HeroSection';
 import NewsLetter from '../Components/NewsLetter';
