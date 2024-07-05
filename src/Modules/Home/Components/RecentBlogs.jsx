@@ -21,6 +21,7 @@ const RecentBlogs = () => {
             <div className='flex justify-between gap-10'>
                 {blogContent.slice(0,3).map((blog) => {
                     return <BlogCard
+                        key={blog.id}
                         title={blog.title}
                         imageSrc={blog.thumbnailImage}
                         date={blog.createdAt}

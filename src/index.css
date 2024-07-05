@@ -10,6 +10,10 @@
     @apply font-body bg-bodyColor overflow-x-hidden w-screen h-screen;
   } 
 
+  html{
+    @apply scroll-smooth;
+  }
+
   .flexVerCenter{
     @apply flex items-center;
   }
@@ -21,7 +25,6 @@
   .footerHeadings{
     @apply text-[#F2F2F2] text-lg xl:text-base lg:text-sm font-medium whitespace-nowrap;
   }
-
   .subHeading{
     @apply text-[40px] font-medium text-primary;
   }
@@ -30,6 +33,15 @@
   }
   .searchShadow{
     @apply shadow-[0px_4px_8px_0px_rgba(0,0,0,0.25)] ;
+  }
+  .paragraphBody{
+    @apply text-base font-light text-justify;
+  }
+  .sectionHeading{
+    @apply text-2xl font-medium text-primary;
+  }
+  .subSectionHeading{
+    @apply text-xl font-medium text-primary;
   }
 }
 
