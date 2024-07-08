@@ -1,5 +1,5 @@
 import React from 'react'
-import {Header, Footer} from '../Common/Components'
+import {Header, Footer, Breadcrumbs} from '../Common/Components'
 import { Outlet } from 'react-router-dom'
 
 const AppLayout = () => {
@@ -8,6 +8,7 @@ const AppLayout = () => {
     // flex-grow in main content making main content to take all available space pushing footer to bottom of page
     <div className='min-h-screen flex flex-col'>
         <Header />
+        <Breadcrumbs />
         <main className='flex-grow w-full'>
           {/* This section is dynamic, changes according to route */}
             <Outlet />

@@ -43,6 +43,12 @@
   .subSectionHeading{
     @apply text-xl font-medium text-primary;
   }
+  .generalLink{
+    @apply font-links text-sm text-extraLightText font-medium;
+  }
+  .generalLinkHover{
+    @apply hover:text-black hover:border-b-2 hover:border-black;
+  }
 }
 
 
