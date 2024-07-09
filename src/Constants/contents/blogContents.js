@@ -8,7 +8,7 @@ export const blogContent = [
         readTime: "4",
         thumbnailImage: "/images/React-image.jpg",
         heroImage: "/images/React-image.jpg",
-        excerpt: "React components are the fundamental building blocks of React applications, designed to encapsulate and manage the user interface (UI) in a modular, reusable manner. This blog explores the core concepts behind React components, their importance, and best practices for their implementation.",
+        excerpt: "Designed to encapsulate and manage the user interface (UI) in a modular, reusable manner. React components are the fundamental building blocks of React applications, designed to encapsulate and manage the user interface (UI) in a modular, reusable manner. This blog explores the core concepts behind React components, their importance, and best practices for their implementation.",
         body: {
             abstract: ["React components are the fundamental building blocks of React applications, designed to encapsulate and manage the user interface (UI) in a modular, reusable manner. By breaking down the UI into smaller, self-contained pieces, React components make it easier to develop, test, and maintain complex web applications. Each component encapsulates its own structure, logic, and styling, allowing developers to focus on specific parts of the UI without being overwhelmed by the entire application.","This blog explores the core concepts behind React components, their importance, and best practices for their implementation. We will delve into why components are essential for building scalable and maintainable applications, the different types of components in React, and how to optimize their performance. Whether you are a beginner or an experienced developer, understanding and mastering React components is crucial for effective modern web development.",],
             section: [
@@ -59,10 +59,10 @@ export const blogContent = [
         title: "traversing of react props",
         createdAt: "July 08, 2024",
         modifiedAt: "July 12, 2024",
-        readTime: "3 mins",
+        readTime: "3",
         thumbnailImage: "/images/React-image.jpg",
         heroImage: "/images/React-image.jpg",
-        excerpt: "React components are the fundamental building blocks of React applications, designed to encapsulate and manage the user interface (UI) in a modular, reusable manner. This blog explores the core concepts behind React components, their importance, and best practices for their implementation.",
+        excerpt: "React components are the fundamental building blocks of React applications, designed to encapsulate and manage the user interface (UI) in a modular, reusable manner.",
         body: {
             abstract: ["In the realm of modern web development, React has emerged as one of the most popular libraries for building dynamic and responsive user interfaces. Introduced by Facebook in 2013, React revolutionized the way developers approach UI development by introducing the concept of components. But what exactly are React components, and why are they so vital?",],
             section: [
@@ -115,7 +115,7 @@ export const blogContent = [
         title: "hook up with react hooks",
         createdAt: "July 05, 2024",
         modifiedAt: "July 09, 2024",
-        readTime: "3 mins",
+        readTime: "3",
         thumbnailImage: "/images/React-image.jpg",
         heroImage: "/images/React-image.jpg",
         excerpt: "React components are the fundamental building blocks of React applications, designed to encapsulate and manage the user interface (UI) in a modular, reusable manner. This blog explores the core concepts behind React components, their importance, and best practices for their implementation.",
@@ -171,7 +171,7 @@ export const blogContent = [
         title: "status of react state",
         createdAt: "July 05, 2024",
         modifiedAt: "July 09, 2024",
-        readTime: "3 mins",
+        readTime: "3",
         thumbnailImage: "/images/React-image.jpg",
         heroImage: "/images/React-image.jpg",
         excerpt: "React components are the fundamental building blocks of React applications, designed to encapsulate and manage the user interface (UI) in a modular, reusable manner. This blog explores the core concepts behind React components, their importance, and best practices for their implementation.",

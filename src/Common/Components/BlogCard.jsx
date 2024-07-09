@@ -12,7 +12,7 @@ const BlogCard = (props) => {
       <div className='mt-2 px-6 py-4'>
         <h4 className='font-links text-lg font-medium text-primary'>{capitalizeWords(title)}</h4>
         <p className='mt-2 font-links text-xs font-medium text-extraLightText'>{date}</p>
-        <p className='mt-4 font-links text-sm font-light text-justify h-[147px] overflow-hidden'>{cardExcerpt}</p>
+        <p className='mt-4 font-links text-sm font-light text-justify h-[156px] overflow-hidden'>{cardExcerpt}</p>
       </div>
       <div className='px-6'>
         <Link to={cardRoute} className='flex gap-2 items-center justify-end'>

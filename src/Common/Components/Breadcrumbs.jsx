@@ -1,32 +1,27 @@
 import React from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { capitalizeWords } from '../HelperFunctions/capitalize';
 
-const Breadcrumbs = () => {
-    const location = useLocation();
-    const pathNames = location.pathname.split("/").filter((x) => x);
-
+const Breadcrumbs = ({path}) => {
     let breadcrumbsPath = '';
-
-    if (pathNames.length === 0) return null;
-    return (
-        <div className='container mt-6'>
-            <Link to={'/'} className='generalLink generalLinkHover'>Home</Link>
-            {
-                pathNames.map((name, index) => {
-                    breadcrumbsPath += `/${name}`;
-
-                    const isLast = index === pathNames.length - 1;
-
-                    return isLast ? (
-                        <span key={index} className='generalLink'><span>{" > "}</span><span className='text-accent'>{capitalizeWords(name)}</span></span>
-                    ) : (
-                        <Link to={breadcrumbsPath} key={index} className='generalLink'><span>{" > "}</span><span className='generalLinkHover'>{capitalizeWords(name)}</span></Link>
-                    )
-                })
+  return (
+    <div className='mt-6'>
+        {path.map((p,index)=>{
+            if(p==="/"){
+               return <Link key={index} to={"/"} className='generalLink generalLinkHover'>Home</Link>
+            }else{
+                const isLast = index === path.length-1;
+                breadcrumbsPath += "/"+p;
+                return isLast ? (
+                    <span key={index} className='generalLink'><span>{" > "}</span><span className='text-accent'>{capitalizeWords(p)}</span></span>
+                ) : (
+                    <Link to={breadcrumbsPath} key={index} className='generalLink'><span>{" > "}</span><span className='generalLinkHover'>{capitalizeWords(p)}</span></Link>
+                )
             }
-        </div>
-    )
+
+        })}
+    </div>
+  )
 }
 
 export default Breadcrumbs

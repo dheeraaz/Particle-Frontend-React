@@ -1,8 +1,13 @@
 import React from 'react'
+import { Breadcrumbs } from '../../../Common/Components';
 
 const Papers = () => {
+  let pathArray=["/","papers"];
   return (
-    <div>Papers</div>
+    <div className='container'>
+      <Breadcrumbs path={pathArray} />
+      <h2>Papers</h2>
+    </div>
   )
 }
 

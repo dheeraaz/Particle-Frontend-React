@@ -29,6 +29,9 @@ export function capitalizeWords(input) {
 
     // Iterate through the sentences array and capitalize the first letter of each words
     for (let i = 0; i < words.length; i++) {
+        if(words[i].toLowerCase()==="of"){
+            continue;
+        }
         words[i] = words[i].trim().charAt(0).toUpperCase() + words[i].slice(1);
     }
 

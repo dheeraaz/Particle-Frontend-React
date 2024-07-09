@@ -1,5 +1,5 @@
-import React from "react"
-import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom"
+import React, { useEffect } from "react"
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements, useLocation } from "react-router-dom"
 import AppLayout from "./Layouts/AppLayout"
 import { routerPaths } from "./Constants/routerPaths.js"
 
