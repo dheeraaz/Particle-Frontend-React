@@ -11,7 +11,7 @@ const Breadcrumbs = ({path}) => {
                return <Link key={index} to={"/"} className='generalLink generalLinkHover'>Home</Link>
             }else{
                 const isLast = index === path.length-1;
-                breadcrumbsPath += "/"+p;
+                breadcrumbsPath += "/"+ p.toLowerCase();
                 return isLast ? (
                     <span key={index} className='generalLink'><span>{" > "}</span><span className='text-accent'>{capitalizeWords(p)}</span></span>
                 ) : (
