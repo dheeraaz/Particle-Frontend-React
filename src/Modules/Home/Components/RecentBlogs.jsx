@@ -4,7 +4,7 @@ import { blogContent } from '../../../Constants/contents/blogContents'
 
 const RecentBlogs = () => {
     return (
-        <div className='mt-14 mb-20 container'>
+        <section className='mt-14 mb-20 container'>
             <h3 className='subHeading mb-9'><span className='text-accent'>Recent</span> Blogs</h3>
             {/* recent blogs section */}
             <div className='flex justify-between gap-10'>
@@ -19,7 +19,7 @@ const RecentBlogs = () => {
                     />
                 })}
             </div>
-        </div>
+        </section>
     )
 }
 

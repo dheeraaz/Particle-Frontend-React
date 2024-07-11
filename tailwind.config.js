@@ -20,6 +20,7 @@ export default {
         'grayText': "#E0E0E0",
         'extraLightText': "rgba(0, 0, 0, 0.60)",
         'hrLineBg':"rgba(37, 34, 65, 0.25)",
+        'divDividerBg':"rgba(254, 85, 62, 0.20)",
       },
     },
     screens: {

@@ -144,12 +144,12 @@ const BlogPage = () => {
 
                 </section>
                 {/* rightSide */}
-                <section className='w-[373px] pl-[39px] h-fit sticky top-24'>
+                <aside className='w-[373px] pl-[39px] h-fit sticky top-24'>
                     <h5 className='text-primary text-[32px] font-medium mb-[20px]'>{capitalizeWords('table of content')}</h5>
                     {singleBlog.body.section.map((singleSec) => (
                         <h4 onClick={() => scrollToSection(singleSec.sectionId)} key={singleSec.sectionId} className={`mb-[15px] font-links text-xl font-medium cursor-pointer ${activeLink === singleSec.sectionId ? "text-accent" : "text-extraLightText"}`}>{capitalizeWords(singleSec.sectionTitle)}</h4>
                     ))}
-                </section>
+                </aside>
             </div>
         </div>
     )

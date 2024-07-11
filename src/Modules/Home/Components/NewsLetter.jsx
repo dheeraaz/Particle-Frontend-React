@@ -3,7 +3,7 @@ import { capitalizeWords } from '../../../Common/HelperFunctions/capitalize'
 
 const NewsLetter = () => {
     return (
-        <div className='container'>
+        <section className='container'>
             <div className='px-[353px] py-16 text-center'>
                 <h3 className='subHeading'>{capitalizeWords('subscribe to our newsletter')}</h3>
                 <p className=' font-links font-medium text-xs text-extraLightText'>We’ll keep you in the loop on our best and latest blog posts.</p>
@@ -19,7 +19,7 @@ const NewsLetter = () => {
 
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

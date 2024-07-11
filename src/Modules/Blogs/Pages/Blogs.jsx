@@ -7,7 +7,7 @@ const Blogs = () => {
   return (
     <div className='container'>
       <Breadcrumbs path={pathArray} />
-      <div className='my-6 flex justify-between flex-wrap gap-10'>
+      <section className='my-6 flex justify-between flex-wrap gap-10'>
         {blogContent.map((subject,index) => {
           return <BlogCard
             key={index}
@@ -18,7 +18,7 @@ const Blogs = () => {
             cardRoute={`/blogs/${subject.subjectTitle.toLowerCase()}`}
           />
         })}
-      </div>
+      </section>
     </div>
   )
 }

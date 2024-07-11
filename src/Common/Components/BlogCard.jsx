@@ -8,7 +8,7 @@ const BlogCard = (props) => {
   const navigate = useNavigate();
 
   return (
-    <div className='w-[400px] bg-bodyColor rounded-lg cursor-pointer group' onClick={() => navigate(cardRoute)}>
+    <div className='w-[400px] rounded-lg cursor-pointer group' onClick={() => navigate(cardRoute)}>
       <div className='rounded-lg w-full h-60 overflow-hidden'>
         <img src={imageSrc} alt={`${title}_img`} className='w-full h-full object-cover rounded-lg transition-all duration-300 group-hover:scale-[1.2]' />
       </div>

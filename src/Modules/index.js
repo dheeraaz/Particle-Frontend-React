@@ -5,14 +5,13 @@ import Articles from './Articles/Pages/Articles.jsx'
 import AOI from './AOI/Pages/AOI.jsx'
 import Contact from './Contact/Pages/Contact.jsx'
 import BlogPage from './BlogPage/Pages/BlogPage.jsx'
-import BlogTitlePage from './BlogTitlePage/Pages/BlogTitlePage.jsx'
-
+import BlogChaptersPage from './BlogChaptersPage/Pages/BlogChaptersPage.jsx'
 
 export {
     Home, 
     Blogs,
     BlogPage,
-    BlogTitlePage,
+    BlogChaptersPage,
     Papers,
     Articles,
     AOI,

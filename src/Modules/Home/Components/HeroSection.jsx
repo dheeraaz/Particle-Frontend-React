@@ -8,7 +8,7 @@ const HeroSection = () => {
     let latestBlogID = blogContent.at(-1).chapters.at(-1).id;
     let latestBlogChapter = blogContent.at(-1).subjectTitle.toLowerCase();
     return (
-        <div className='bg-primary'>
+        <section className='bg-primary'>
             <div className='container flex justify-between items-center'>
                 {/* Hero Section - left side */}
                 <div>
@@ -24,7 +24,7 @@ const HeroSection = () => {
                     <img src="/images/hero_section_img.svg" alt="hero_image" />
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
