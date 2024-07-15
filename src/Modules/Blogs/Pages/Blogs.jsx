@@ -7,7 +7,17 @@ const Blogs = () => {
   return (
     <div className='container'>
       <Breadcrumbs path={pathArray} />
-      <section className='my-6 flex justify-between flex-wrap gap-10'>
+      <section className='my-6 xl:my-5 flex justify-center flex-wrap gap-10 xl:gap-9'>
+        {blogContent.map((subject,index) => {
+          return <BlogCard
+            key={index}
+            title={subject.subjectTitle}
+            titleRight
+            imageSrc={subject.subjectCardImage}
+            cardExcerpt={subject.subjectExcerpt}
+            cardRoute={`/blogs/${subject.subjectTitle.toLowerCase()}`}
+          />
+        })}
         {blogContent.map((subject,index) => {
           return <BlogCard
             key={index}

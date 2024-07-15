@@ -22,7 +22,7 @@ const Header = () => {
   }, [])
 
   return (
-    <header className={`flex items-center bg-primary transition-all ease-in-out h-24 z-10 ${isScroll?('sticky top-0 shadow-lg'):('')}`}>
+    <header className={`flex items-center bg-primary transition-all ease-in-out h-24 xl:h-20 z-10 ${isScroll?('sticky top-0 shadow-lg'):('')}`}>
       <div className='container flexVerCenter justify-between'>
         <Logo />
         <Navbar />
