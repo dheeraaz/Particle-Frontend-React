@@ -127,10 +127,12 @@ const BlogPage = () => {
 
                 </section>
                 {/* rightSide */}
-                <aside className='w-[373px]  pl-[41px] xl:w-[338px] xl:pl-[38px] h-fit sticky top-24 xl:top-22'>
-                    <h5 className='text-primary text-[32px] xl:text-[30px] font-medium mb-[20px]'>{capitalizeWords('table of content')}</h5>
+                <aside className='w-[373px]  pl-[41px] xl:w-[338px] xl:pl-[38px] h-fit sticky top-32 xl:top-28'>
+                    {/* <h5 className='text-primary text-[32px] xl:text-[30px] font-medium mb-4'>{capitalizeWords('table of content')}</h5> */}
+                    <h5 className='sectionHeading mb-4'>{capitalizeWords('table of content')}</h5>
                     {singleBlog.body.section.map((singleSec) => (
-                        <h4 onClick={() => scrollToSection(singleSec.sectionId)} key={singleSec.sectionId} className={`mb-[15px] xl:mb-[12px] font-links text-xl xl:text-lg font-medium cursor-pointer ${activeLink === singleSec.sectionId ? "text-accent" : "text-extraLightText"}`}>{capitalizeWords(singleSec.sectionTitle)}</h4>
+                        // <h4 onClick={() => scrollToSection(singleSec.sectionId)} key={singleSec.sectionId} className={`mb-3 xl:mb-2 text-xl xl:text-lg font-medium cursor-pointer ${activeLink === singleSec.sectionId ? "text-accent" : "text-lightText"}`}>{capitalizeWords(singleSec.sectionTitle)}</h4>
+                        <h4 onClick={() => scrollToSection(singleSec.sectionId)} key={singleSec.sectionId} className={`mb-3 xl:mb-2 paragraphBody cursor-pointer ${activeLink === singleSec.sectionId ? "text-accent" : ""}`}>{capitalizeWords(singleSec.sectionTitle)}</h4>
                     ))}
                 </aside>
             </div>

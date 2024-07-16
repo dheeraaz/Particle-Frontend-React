@@ -7,8 +7,9 @@ const Blogs = () => {
   return (
     <div className='container'>
       <Breadcrumbs path={pathArray} />
-      <section className='my-6 xl:my-5 flex justify-center flex-wrap gap-10 xl:gap-9'>
-        {blogContent.map((subject,index) => {
+      {/* <section className='my-6 xl:my-5 flex justify-between flex-wrap '> */}
+      <section className='my-6 xl:my-5 w-full grid grid-cols-4 gap-10 xl:grid-cols-3 xl:gap-9'>
+        {blogContent.map((subject, index) => {
           return <BlogCard
             key={index}
             title={subject.subjectTitle}
@@ -18,15 +19,15 @@ const Blogs = () => {
             cardRoute={`/blogs/${subject.subjectTitle.toLowerCase()}`}
           />
         })}
-        {blogContent.map((subject,index) => {
+        {blogContent.map((subject, index) => {
           return <BlogCard
-            key={index}
-            title={subject.subjectTitle}
-            titleRight
-            imageSrc={subject.subjectCardImage}
-            cardExcerpt={subject.subjectExcerpt}
-            cardRoute={`/blogs/${subject.subjectTitle.toLowerCase()}`}
-          />
+              key={index}
+              title={subject.subjectTitle}
+              titleRight
+              imageSrc={subject.subjectCardImage}
+              cardExcerpt={subject.subjectExcerpt}
+              cardRoute={`/blogs/${subject.subjectTitle.toLowerCase()}`}
+            />
         })}
       </section>
     </div>

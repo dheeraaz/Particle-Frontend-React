@@ -12,7 +12,7 @@ const ReleventBlogCard = (props) => {
           <img src={imageSrc} alt={`${title}_img`} className='w-full h-full object-cover rounded-lg transition-all duration-300 group-hover:scale-[1.2]' />
         </div>
         <div className='w-[186px] flex flex-col gap-10 xl:gap-8 '>
-          <h4 className='font-links text-2xl xl:text-xl font-medium text-primary group-hover:underline'>{capitalizeWords(title)}</h4>
+          <h4 className='font-links text-xl xl:text-lg font-medium text-primary group-hover:underline'>{capitalizeWords(title)}</h4>
           <p className='mt-2 font-links text-sm xl:text-xs font-medium text-extraLightText'>{date}</p>
         </div>
       </div>
