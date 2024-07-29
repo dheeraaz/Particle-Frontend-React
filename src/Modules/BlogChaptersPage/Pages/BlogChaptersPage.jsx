@@ -80,7 +80,7 @@ const BlogChaptersPage = () => {
           </div>
         </aside>
         <aside className='w-[547px] xl:w-[496px] ml-10 xl:ml-9'>
-          <h3 className=' text-primary text-[32px] xl:text-[30px] font-medium'>You may also like</h3>
+          <h3 className='text-2xl xl:text-xl font-medium text-primary'>You May Also Like</h3>
           <div className='mt-[31px] xl:mt-[27px] flex flex-col gap-9'>
             {releventBlogs.slice(0, 3).map((blog, index) => {
               return <ReleventBlogCard key={index} title={blog.blogTitle} imageSrc={blog.imgSrc} date={blog.createdAt} cardRoute={`/blogs/${blog.subjectTitle}/${blog.blogId}`} />

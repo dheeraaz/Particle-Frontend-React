@@ -132,7 +132,7 @@ const BlogPage = () => {
                     <h5 className='sectionHeading mb-4'>{capitalizeWords('table of content')}</h5>
                     {singleBlog.body.section.map((singleSec) => (
                         // <h4 onClick={() => scrollToSection(singleSec.sectionId)} key={singleSec.sectionId} className={`mb-3 xl:mb-2 text-xl xl:text-lg font-medium cursor-pointer ${activeLink === singleSec.sectionId ? "text-accent" : "text-lightText"}`}>{capitalizeWords(singleSec.sectionTitle)}</h4>
-                        <h4 onClick={() => scrollToSection(singleSec.sectionId)} key={singleSec.sectionId} className={`mb-3 xl:mb-2 paragraphBody cursor-pointer ${activeLink === singleSec.sectionId ? "text-accent" : ""}`}>{capitalizeWords(singleSec.sectionTitle)}</h4>
+                        <h4 onClick={() => scrollToSection(singleSec.sectionId)} key={singleSec.sectionId} className={`mb-3 xl:mb-2 paragraphBody cursor-pointer ${activeLink === singleSec.sectionId ? "text-accent" : ""} hover:text-accent`}>{capitalizeWords(singleSec.sectionTitle)}</h4>
                     ))}
                 </aside>
             </div>
