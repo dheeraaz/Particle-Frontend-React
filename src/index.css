@@ -34,6 +34,9 @@
   .searchShadow{
     @apply shadow-[0px_4px_8px_0px_rgba(0,0,0,0.25)] ;
   }
+  .pageShadow{
+    @apply shadow-[0px_0px_4px_0px_rgba(0,0,0,0.50)];
+  }
   .paragraphBody{
     @apply text-base xl:text-sm font-light text-justify;
   }
@@ -49,6 +52,28 @@
   .generalLinkHover{
     @apply hover:text-black hover:border-b-2 hover:border-black;
   }
+  ._a4-paper {
+    /*
+    * Actual dimension of the A4 paper on the screen...
+    width: 21cm;
+    height: 29.7cm; */
+   
+    --width: 33cm;
+    --ratio: 1.41428571429;
+    max-width: 100%;
+    width: var(--width);
+    height: calc(var(--ratio) * var(--width));
+    background: white;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50);
+    margin: 24px auto;
+    padding: 1in;
+  }
+}
+
+._article_column{
+  column-count: 2;
+  column-fill: auto;
+  column-gap: 32px;
 }
 
 
