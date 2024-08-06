@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useDebugValue, useEffect, useLayoutEffect } from 'react'
 import { Breadcrumbs } from '../../../Common/Components';
 import { paperContent } from '../../../Constants/contents/paperContent'
+import { breakPage } from '../Utility/overflowCheck.js';
 
 const Papers = () => {
+
   let pathArray = ["/", "papers"];
+  useEffect(()=>{
+    const overflowContainer = document.querySelector('._overflow-container');
+    const children = overflowContainer?.childNodes;
+    breakPage(children, overflowContainer)
+  },[])
+
   return (
-    <div className='container'>
+    <div className='container _paper-page'>
       <Breadcrumbs path={pathArray} />
 
       {/* <section className='w-[1270px] mx-auto bg-white pageShadow mt-6 px-[10px] py-5 '> */}
@@ -51,7 +59,7 @@ const Papers = () => {
         </div>
 
         {/* main content */}
-        <div className='bg-red-100 h-[1190px] mt-4 _article_column text-sm font-light text-justify'>
+        <div className='bg-red-100 h-[1190px] mt-4 _paper_column text-sm font-light text-justify _overflow-container'>
         {/* <div className='mt-4 _article_column text-sm font-light text-justify '> */}
           {paperContent[0].contents.map((con, m_index) => (
             <div key={m_index} className='mb-4'>
@@ -91,8 +99,6 @@ const Papers = () => {
           ))}
 
         </div>
-
-
       </section>
 
     </div>
