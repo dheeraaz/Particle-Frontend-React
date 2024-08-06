@@ -51,8 +51,8 @@ const Papers = () => {
         </div>
 
         {/* main content */}
-        <div className='bg-red-100 h-[1190px] mt-4 _article_column text-sm font-light text-justify'>
-        {/* <div className='mt-4 _article_column text-sm font-light text-justify '> */}
+        {/* <div className='bg-red-100 h-[1190px] mt-4 _article_column text-sm font-light text-justify'> */}
+        <div className='mt-4 _article_column text-sm font-light text-justify '>
           {paperContent[0].contents.map((con, m_index) => (
             <div key={m_index} className='mb-4'>
               <div>
@@ -61,28 +61,39 @@ const Papers = () => {
                   <p key={index} className='mt-2'>{para}</p>
                 ))}
               </div>
-              {
-                con.secImage && <div>
-                  <img src={con.secImage} alt={`${con.secTitle}_img`} className='mt-4 w-full h-full object-cover' />
-                  <p className='text-center'>Fig: {con.secImageCaption}</p>
-                </div>
-              }
+              {con.secImage && <div>
+                <img src={con.secImage} alt={`${con.secTitle}_img`} className='mt-4 w-full h-full object-cover' />
+                <p className='text-center'>Fig: {con.secImageCaption}</p>
+              </div>}
 
               {
                 con.subSection?.map((subsec, s_index) => (
                   <div key={s_index}>
                     <div>
-                      <h6 className='font-medium'>{m_index + 1}.{s_index + 1}. {subsec.subSectionTitle}</h6>
+                      <h6 className='font-medium mt-2'>{m_index + 1}.{s_index + 1}. {subsec.subSectionTitle}</h6>
                       {subsec?.subSectionContent?.map((para, index) => (
                         <p key={index} className='mt-2'>{para}</p>
                       ))}
                     </div>
-                    <div>
-                      {subsec.subSectionImage && <div>
-                        <img src={subsec.subSectionImage} alt={`${subsec.subSectionTitle}_img`} className='mt-4 w-full h-full object-cover' />
-                        <p className='text-center'>Fig: {subsec.subSectionImageCaption}</p>
-                      </div>}
-                    </div>
+                    {subsec?.subSectionImage && <div>
+                      <img src={subsec.subSectionImage} alt={`${subsec.subSectionTitle}_img`} className='mt-4 w-full h-full object-cover' />
+                      <p className='text-center'>Fig: {subsec.subSectionImageCaption}</p>
+                    </div>}
+
+                    {subsec.subSubSection?.map((subSubSec, ss_index) => (
+                      <div key={ss_index}>
+                        <div>
+                          <h6 className='font-medium mt-2'>{m_index + 1}.{s_index + 1}.{ss_index + 1} {subSubSec.subsubSectionTitle}</h6>
+                          {subSubSec?.subsubSectionContent?.map((para, index) => (
+                            <p key={index} className='mt-2'>{para}</p>
+                          ))}
+                        </div>
+                        {subSubSec.subsubSectionImage && <div>
+                          <img src={subSubSec.subsubSectionImage} alt={`${subSubSec.subsubSectionTitle}_img`} className='mt-4 w-full h-full object-cover' />
+                          <p className='text-center'>Fig: {subSubSec.subsubSectionImageCaption}</p>
+                        </div>}
+                      </div>
+                    ))}
                   </div>
                 ))
               }
