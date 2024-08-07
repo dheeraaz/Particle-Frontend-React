@@ -1,8 +1,8 @@
 import React from 'react'
-import { capitalizeWords } from '../../../Common/HelperFunctions/capitalize'
+import { capitalizeWords } from '../HelperFunctions/capitalize'
 import { useNavigate } from 'react-router-dom'
 
-const ReleventBlogCard = (props) => {
+const ReleventCard = (props) => {
     const { title,imageSrc, date, cardRoute } = props;
     const navigate = useNavigate();
   
@@ -20,7 +20,7 @@ const ReleventBlogCard = (props) => {
     )
 }
 
-export default ReleventBlogCard
+export default ReleventCard
 
 
 

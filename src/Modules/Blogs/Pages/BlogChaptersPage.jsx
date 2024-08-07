@@ -3,7 +3,7 @@ import { Breadcrumbs } from '../../../Common/Components';
 import { useNavigate, useParams } from 'react-router-dom';
 import { blogContent } from '../../../Constants/contents/blogContents';
 import { capitalizeWords } from '../../../Common/HelperFunctions/capitalize';
-import ReleventBlogCard from '../Components/ReleventBlogCard';
+import {ReleventCard} from '../../../Common/Components';
 
 const BlogChaptersPage = () => {
   const navigate = useNavigate();
@@ -83,7 +83,7 @@ const BlogChaptersPage = () => {
           <h3 className='text-2xl xl:text-xl font-medium text-primary'>You May Also Like</h3>
           <div className='mt-[31px] xl:mt-[27px] flex flex-col gap-9'>
             {releventBlogs.slice(0, 3).map((blog, index) => {
-              return <ReleventBlogCard key={index} title={blog.blogTitle} imageSrc={blog.imgSrc} date={blog.createdAt} cardRoute={`/blogs/${blog.subjectTitle}/${blog.blogId}`} />
+              return <ReleventCard key={index} title={blog.blogTitle} imageSrc={blog.imgSrc} date={blog.createdAt} cardRoute={`/blogs/${blog.subjectTitle}/${blog.blogId}`} />
             })}
           </div>
 

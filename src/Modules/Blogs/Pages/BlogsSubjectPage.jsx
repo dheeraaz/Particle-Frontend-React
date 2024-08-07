@@ -2,7 +2,7 @@ import React from 'react'
 import { BlogCard, Breadcrumbs } from '../../../Common/Components'
 import { blogContent } from '../../../Constants/contents/blogContents';
 
-const Blogs = () => {
+const BlogsSubjectPage = () => {
   let pathArray = ["/", "blogs"];
   return (
     <div className='container'>
@@ -34,5 +34,5 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default BlogsSubjectPage
 

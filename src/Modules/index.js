@@ -1,18 +1,18 @@
 import Home from './Home/Pages/Home.jsx'
-import Blogs from './Blogs/Pages/Blogs.jsx'
-import Papers from './Papers/Pages/Papers.jsx'
+import BlogsSubjectPage from './Blogs/Pages/BlogsSubjectPage.jsx'
+import PapersContentPage from './Papers/Pages/PapersContentPage.jsx'
 import Articles from './Articles/Pages/Articles.jsx'
 import AOI from './AOI/Pages/AOI.jsx'
 import Contact from './Contact/Pages/Contact.jsx'
-import BlogPage from './BlogPage/Pages/BlogPage.jsx'
-import BlogChaptersPage from './BlogChaptersPage/Pages/BlogChaptersPage.jsx'
+import BlogContentPage from './Blogs/Pages/BlogContentPage.jsx'
+import BlogChaptersPage from './Blogs/Pages/BlogChaptersPage.jsx'
 
 export {
     Home, 
-    Blogs,
-    BlogPage,
+    BlogsSubjectPage,
+    BlogContentPage,
     BlogChaptersPage,
-    Papers,
+    PapersContentPage,
     Articles,
     AOI,
     Contact,
