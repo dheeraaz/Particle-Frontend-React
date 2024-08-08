@@ -1,5 +1,6 @@
 import React from 'react'
 import { capitalizeWords } from '../HelperFunctions/capitalize'
+import { truncate } from '../HelperFunctions/truncate'
 import { useNavigate } from 'react-router-dom'
 
 const ReleventCard = (props) => {
@@ -13,7 +14,7 @@ const ReleventCard = (props) => {
         </div>
         <div className='w-[186px] flex flex-col gap-10 xl:gap-8 '>
           {/* <h4 className='font-links text-xl xl:text-lg font-medium text-primary group-hover:underline'>{capitalizeWords(title)}</h4> */}
-          <h4 className='font-links text-lightText group-hover:text-primary text-lg xl:text-base font-normal group-hover:underline'>{capitalizeWords(title)}</h4>
+          <h4 className='font-links text-lightText group-hover:text-primary text-lg xl:text-base font-normal group-hover:underline'>{truncate(capitalizeWords(title),32)}</h4>
           <p className='mt-2 font-links text-sm xl:text-xs font-medium text-extraLightText group-hover:text-primary'>{date}</p>
         </div>
       </div>

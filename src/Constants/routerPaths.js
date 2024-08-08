@@ -1,4 +1,15 @@
-import { Home, BlogsSubjectPage, BlogChaptersPage, BlogContentPage, PapersContentPage, Articles, AOI, Contact } from '../Modules/index.js';
+import { 
+    Home, 
+    BlogsSubjectPage, 
+    BlogChaptersPage, 
+    BlogContentPage, 
+    PapersSubjectPage, 
+    PapersChaptersPage, 
+    PapersContentPage, 
+    Articles, 
+    AOI, 
+    Contact 
+} from '../Modules/index.js';
 
 export const routerPaths = [
     {
@@ -15,13 +26,13 @@ export const routerPaths = [
     },
     {
         "id": "2.1",
-        "name": "blogs",
+        "name": "blogsChapters",
         "path": '/blogs/:subjectTitle',
         "component": BlogChaptersPage,
     },
     {
         "id": "2.1.1",
-        "name": "blogPage",
+        "name": "blogsContent",
         "path": '/blogs/:subjectTitle/:blogId',
         "component": BlogContentPage,
     },
@@ -29,6 +40,18 @@ export const routerPaths = [
         "id": "3",
         "name": "papers",
         "path": '/papers',
+        "component": PapersSubjectPage,
+    },
+    {
+        "id": "3.1",
+        "name": "papersChapters",
+        "path": '/papers/:subjectTitle',
+        "component": PapersChaptersPage,
+    },
+    {
+        "id": "3.1.1",
+        "name": "papersContent",
+        "path": '/papers/:subjectTitle/:paperId',
         "component": PapersContentPage,
     },
     {

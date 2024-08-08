@@ -1,41 +1,42 @@
 import React from 'react'
 import { Breadcrumbs } from '../../../Common/Components';
 import { useNavigate, useParams } from 'react-router-dom';
-import { blogContent } from '../../../Constants/contents/blogContents';
+// import { blogContent } from '../../../Constants/contents/blogContents';
+import { paperContent } from '../../../Constants/contents/paperContent';
 import { capitalizeWords } from '../../../Common/HelperFunctions/capitalize';
 import {ReleventCard} from '../../../Common/Components';
 
-const BlogChaptersPage = () => {
+const PapersChaptersPage = () => {
   const navigate = useNavigate();
   const { subjectTitle } = useParams();
 
   // for creating the breadcrumbs
-  let pathArray = ["/", "blogs", subjectTitle];
+  let pathArray = ["/", "papers", subjectTitle];
 
   let singleSubject;
-  const releventBlogs = [];
+  const releventPapers = [];
 
-  // for getting the relevent subject
-  blogContent.forEach((subject) => {
+  // for getting the desired subject
+  paperContent.forEach((subject) => {
     if (subject.subjectTitle.toLowerCase() === subjectTitle) {
       singleSubject = subject;
     }
   })
 
   // for relevent Blogs, selecting random blogs from the chapters other than current chapters
-  blogContent.forEach((subject) => {
+  paperContent.forEach((subject) => {
     if (subject.subjectTitle.toLowerCase() !== subjectTitle) {
       const randomChapter = subject.chapters[(Math.floor(Math.random() * subject.chapters.length))];
 
-      const singleBlog = {
+      const singlePaperCard = {
         "subjectTitle": subject.subjectTitle.toLowerCase(),
-        "blogId": randomChapter.id,
-        "blogTitle": randomChapter.title,
+        "paperId": randomChapter.id,
+        "paperTitle": randomChapter.title,
         "createdAt": randomChapter.createdAt,
         "imgSrc": randomChapter.thumbnailImage,
       };
 
-      releventBlogs.push(singleBlog);
+      releventPapers.push(singlePaperCard);
     }
   })
   return (
@@ -56,12 +57,12 @@ const BlogChaptersPage = () => {
       {/* Bottom Section */}
       <section className='my-20 xl:my-[72px] flex justify-between'>
         <aside className='w-[733px] xl:w-[664px] pr-[60px] border-r-[1px] border-extraLightText'>
-          <h3 className=' text-primary text-[32px] xl:text-[30px] font-medium'>Blogs / Contents</h3>
+          <h3 className=' text-primary text-[32px] xl:text-[30px] font-medium'>Papers / Contents</h3>
           <div className='mt-8 xl:mt-7'>
             {singleSubject?.chapters?.map((chap, index) => {
               return (
-                <div onClick={() => navigate(`/blogs/${subjectTitle.toLowerCase()}/${chap.id}`)} key={index} className='h-11 font-links text-lightText hover:text-black text-xl xl:h-10 xl:text-lg font-normal flex items-center justify-between border-b-[1px] border-divDividerBg hover:border-black cursor-pointer group'>
-                  <h4 className='flex-1 truncate'>{capitalizeWords(chap.title)}</h4>
+                <div onClick={() => navigate(`/papers/${subjectTitle.toLowerCase()}/${chap.id}`)} key={index} className='h-11 font-links text-lightText hover:text-black text-xl xl:h-10 xl:text-lg font-normal flex items-center justify-between border-b-[1px] border-divDividerBg hover:border-black cursor-pointer group'>
+                  <h4 className='flex-1 truncate pr-5'>{capitalizeWords(chap.title)}</h4>
                   {/* <img src="/icons/right_arrow.svg" alt="right_arrow_img" className='group-hover:translate-x-2 transition-all duration-200 max-w-[27px] max-h-[24px] xl:max-w-[24px] xl:max-h-[22]' /> */}
                   <svg
                     className='text-lightText group-hover:text-black group-hover:translate-x-2 transition-all duration-200 max-w-[24px] max-h-[25px] xl:max-w-[22px] xl:max-h-[20]'
@@ -79,11 +80,12 @@ const BlogChaptersPage = () => {
             })}
           </div>
         </aside>
+
         <aside className='w-[547px] xl:w-[496px] ml-10 xl:ml-9'>
           <h3 className='text-2xl xl:text-xl font-medium text-primary'>You May Also Like</h3>
           <div className='mt-[31px] xl:mt-[27px] flex flex-col gap-9'>
-            {releventBlogs.slice(0, 3).map((blog, index) => {
-              return <ReleventCard key={index} title={blog.blogTitle} imageSrc={blog.imgSrc} date={blog.createdAt} cardRoute={`/blogs/${blog.subjectTitle}/${blog.blogId}`} />
+            {releventPapers?.slice(0, 3).map((paper, index) => {
+              return <ReleventCard key={index} title={paper.subjectTitle} imageSrc={paper.imgSrc} date={paper.createdAt} cardRoute={`/papers/${paper.subjectTitle}/${paper.paperId}`} />
             })}
           </div>
 
@@ -93,4 +95,4 @@ const BlogChaptersPage = () => {
   )
 }
 
-export default BlogChaptersPage
+export default PapersChaptersPage
