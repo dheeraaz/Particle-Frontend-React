@@ -1,7 +1,7 @@
 export const paperContent = [
     {
         subjectId: "1",
-        subjectTitle: "1Artificial Intelligence",
+        subjectTitle: "Artificial Intelligence_1",
         subjectExcerpt: [
             "React is an open-source JavaScript library developed by Facebook for building user interfaces, particularly single-page applications where a dynamic and high-performing user experience is crucial.",
             "It focuses on the view layer of the MVC (Model-View-Controller) architecture and enables developers to create reusable UI components. "
@@ -12,7 +12,7 @@ export const paperContent = [
         chapters: [
             {
                 id: "1",
-                type: "blog",
+                type: "paper",
                 createdAt: "July 03, 2024",
                 thumbnailImage: "/images/blogImage/React-image.jpg",
                 excerpt: ["Designed to encapsulate and manage the user interface (UI) in a modular, reusable manner.", "React components are the fundamental building blocks of React applications, designed to encapsulate and manage the user interface (UI) in a modular, reusable manner. This blog explores the core concepts behind React components, their importance, and best practices for their implementation."],
@@ -200,7 +200,7 @@ export const paperContent = [
     },
     {
         subjectId: "2",
-        subjectTitle: "2Artificial Intelligence",
+        subjectTitle: "Artificial Intelligence_2",
         subjectExcerpt: [
             "React is an open-source JavaScript library developed by Facebook for building user interfaces, particularly single-page applications where a dynamic and high-performing user experience is crucial.",
             "It focuses on the view layer of the MVC (Model-View-Controller) architecture and enables developers to create reusable UI components. "

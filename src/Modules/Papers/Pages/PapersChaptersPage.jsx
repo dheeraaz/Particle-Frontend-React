@@ -19,7 +19,7 @@ const PapersChaptersPage = () => {
     }
   })
 
-  // for relevent Blogs, selecting random blogs from the chapters other than current chapters
+  // for relevent papers, selecting random blogs from the chapters other than current chapters
   paperContent.forEach((subject) => {
     if (subject.subjectTitle.toLowerCase() !== subjectTitle) {
       const randomChapter = subject.chapters[(Math.floor(Math.random() * subject.chapters.length))];

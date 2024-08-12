@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { capitalizeWords } from '../HelperFunctions/capitalize';
+import { truncate } from '../HelperFunctions/truncate';
+
 
 const Breadcrumbs = ({path}) => {
     let breadcrumbsPath = '';
@@ -13,9 +15,9 @@ const Breadcrumbs = ({path}) => {
                 const isLast = index === path.length-1;
                 breadcrumbsPath += "/"+ p.toLowerCase();
                 return isLast ? (
-                    <span key={index} className='generalLink'><span>{" > "}</span><span className='text-accent'>{capitalizeWords(p)}</span></span>
+                    <span key={index} className='generalLink'><span>{" > "}</span><span className='text-accent'>{truncate(capitalizeWords(p),40)}</span></span>
                 ) : (
-                    <Link to={breadcrumbsPath} key={index} className='generalLink'><span>{" > "}</span><span className='generalLinkHover'>{capitalizeWords(p)}</span></Link>
+                    <Link to={breadcrumbsPath} key={index} className='generalLink'><span>{" > "}</span><span className='generalLinkHover'>{truncate(capitalizeWords(p),40)}</span></Link>
                 )
             }
 

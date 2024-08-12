@@ -20,7 +20,7 @@ const PapersContentPage = () => {
   })
 
   // for creating the breadcrumbs
-  let finalBreadCrumbs = truncate(singlePaper.title, 40);
+  let finalBreadCrumbs = singlePaper.title;
   let pathArray = ["/", "papers", subjectTitle, finalBreadCrumbs];
 
 
