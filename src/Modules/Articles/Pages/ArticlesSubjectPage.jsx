@@ -1,7 +1,7 @@
 import React from 'react'
 import { Breadcrumbs } from '../../../Common/Components';
 
-const Articles = () => {
+const ArticlesSubjectPage = () => {
   let pathArray=["/","articles"];
   return (
     <div className='container'>
@@ -11,4 +11,4 @@ const Articles = () => {
   )
 }
 
-export default Articles
+export default ArticlesSubjectPage

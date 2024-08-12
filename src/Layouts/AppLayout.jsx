@@ -18,7 +18,7 @@ const AppLayout = () => {
     <div className='min-h-screen flex flex-col'>
         <Header />
         {/* <Breadcrumbs2 /> */}
-        <main className='flex-grow w-full'>
+        <main className='flex-1 w-full'>
           {/* This section is dynamic, changes according to route */}
             <Outlet />
         </main>

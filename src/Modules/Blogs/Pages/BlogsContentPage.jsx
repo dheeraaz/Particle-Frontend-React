@@ -4,7 +4,7 @@ import { blogContent } from '../../../Constants/contents/blogContents';
 import { capitalizeWords } from '../../../Common/HelperFunctions/capitalize'
 import { Breadcrumbs } from '../../../Common/Components';
 
-const BlogContentPage = () => {
+const BlogsContentPage = () => {
     const { subjectTitle, blogId } = useParams();
     let singleBlog;
 
@@ -140,5 +140,5 @@ const BlogContentPage = () => {
     )
 }
 
-export default BlogContentPage
+export default BlogsContentPage
 

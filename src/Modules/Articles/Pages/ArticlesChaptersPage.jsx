@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { blogContent } from '../../../Constants/contents/blogContents';
 import {ReleventCard} from '../../../Common/Components';
 
-const BlogChaptersPage = () => {
+const ArticlesChaptersPage = () => {
   const { subjectTitle } = useParams();
 
   // for creating the breadcrumbs
@@ -68,4 +68,4 @@ const BlogChaptersPage = () => {
   )
 }
 
-export default BlogChaptersPage
+export default ArticlesChaptersPage
