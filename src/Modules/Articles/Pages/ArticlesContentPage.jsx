@@ -5,7 +5,7 @@ import { capitalizeWords } from '../../../Common/HelperFunctions/capitalize'
 import { Breadcrumbs } from '../../../Common/Components';
 
 const ArticlesContentPage = () => {
-    const { subjectTitle, articleId} = useParams();
+    const { subjectTitle, articleId } = useParams();
     let singleArticle;
 
     //For getting article content
@@ -27,9 +27,56 @@ const ArticlesContentPage = () => {
     return (
         <div className='container'>
             <Breadcrumbs path={pathArray} />
-            <div className='my-6 flex justify-between'>
-               <p>{subjectTitle}</p>
-            </div>
+            <section className='my-6'>
+                {/* author name */}
+                <h3 className=' text-end font-links font-medium text-base'>{singleArticle?.body?.author}</h3>
+
+                <hr className='w-full h-[1px] mt-1 mb-6 border-extraLightText' />
+
+                {/* title and description */}
+                <h1 className='font-links text-5xl font-semibold leading-normal'>{capitalizeWords(singleArticle.title)}</h1>
+                <p className='text-[40px] font-normal'>{capitalizeWords(singleArticle?.body?.titleDesc)}</p>
+
+                {/* article date */}
+                <div className='flexVerCenter gap-2 justify-end'>
+                    <img src="/icons/date-icon.svg" alt="date_icon" />
+                    <p className='text-sm xl:text-xs font-normal text-extraLightText'>{singleArticle?.createdAt}</p>
+                </div>
+
+                <hr className='w-full h-[1px] mt-1 mb-3 border-extraLightText' />
+
+                {/* main content */}
+                <div className='_article_column text-base text-justify'>
+                    {singleArticle?.body?.section?.map((section, index) => (
+                        <div key={index}>
+                            <h1 className=' font-semibold text-2xl'>{section.sectionTitle}</h1>
+                            {section?.sectionContent && section.sectionContent.map((para, index) => (
+                                <p key={index} className='mb-4 font-normal paragraphBody'>{para}</p>
+                            ))}
+
+                            {section?.sectionImage && <div>
+                                <img src={section?.sectionImage} alt={`${section?.sectionImage}_img`} className='my-4 w-full h-full object-cover' />
+                            </div>}
+
+                            {section?.subSection && section?.subSection.map((subSec, index) => (
+                                <div key={index}>
+                                    <h1 className=' font-semibold text-base'>{subSec.subSectionTitle}</h1>
+                                    {subSec?.subSectionContent && subSec.subSectionContent.map((para, index) => (
+                                        <p key={index} className='mb-4 font-normal paragraphBody'>{para}</p>
+                                    ))}
+
+                                    {subSec?.subSectionImage && <div>
+                                        <img src={subSec?.subSectionImage} alt={`${subSec?.subSectionImage}_img`} className='my-4 w-full object-cover' />
+                                    </div>}
+                                </div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+
+                {/*  */}
+
+            </section>
         </div>
     )
 }

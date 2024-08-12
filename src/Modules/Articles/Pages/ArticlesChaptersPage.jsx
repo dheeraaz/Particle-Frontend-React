@@ -8,7 +8,7 @@ const ArticlesChaptersPage = () => {
   const { subjectTitle } = useParams();
 
   // for creating the breadcrumbs
-  let pathArray = ["/", "blogs", subjectTitle];
+  let pathArray = ["/", "articles", subjectTitle];
 
   let singleSubject;
   const releventArticles = [];
