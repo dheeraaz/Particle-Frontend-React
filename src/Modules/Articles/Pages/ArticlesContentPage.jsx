@@ -38,12 +38,12 @@ const ArticlesContentPage = () => {
                 <p className='text-[40px] font-normal'>{capitalizeWords(singleArticle?.body?.titleDesc)}</p>
 
                 {/* article date */}
-                <div className='flexVerCenter gap-2 justify-end'>
+                <div className='flexVerCenter gap-2 justify-end mt-6'>
                     <img src="/icons/date-icon.svg" alt="date_icon" />
                     <p className='text-sm xl:text-xs font-normal text-extraLightText'>{singleArticle?.createdAt}</p>
                 </div>
 
-                <hr className='w-full h-[1px] mt-1 mb-3 border-extraLightText' />
+                <hr className='w-full h-[1px] mt-1 mb-6 border-extraLightText' />
 
                 {/* main content */}
                 <div className='_article_column text-base text-justify'>
@@ -51,7 +51,7 @@ const ArticlesContentPage = () => {
                         <div key={index}>
                             <h1 className=' font-semibold text-2xl'>{section.sectionTitle}</h1>
                             {section?.sectionContent && section.sectionContent.map((para, index) => (
-                                <p key={index} className='mb-4 font-normal paragraphBody'>{para}</p>
+                                <p key={index} className='mb-4 paragraphBody'>{para}</p>
                             ))}
 
                             {section?.sectionImage && <div>
@@ -62,7 +62,7 @@ const ArticlesContentPage = () => {
                                 <div key={index}>
                                     <h1 className=' font-semibold text-base'>{subSec.subSectionTitle}</h1>
                                     {subSec?.subSectionContent && subSec.subSectionContent.map((para, index) => (
-                                        <p key={index} className='mb-4 font-normal paragraphBody'>{para}</p>
+                                        <p key={index} className='mb-4 paragraphBody'>{para}</p>
                                     ))}
 
                                     {subSec?.subSectionImage && <div>
@@ -73,9 +73,6 @@ const ArticlesContentPage = () => {
                         </div>
                     ))}
                 </div>
-
-                {/*  */}
-
             </section>
         </div>
     )

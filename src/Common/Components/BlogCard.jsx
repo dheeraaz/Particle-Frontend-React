@@ -12,7 +12,7 @@ const BlogCard = (props) => {
     // for image, width is set to card width whereas height is provided with some values for making all the images with the same size
     <div className='max-w-[400px] rounded-lg cursor-pointer group' onClick={() => navigate(cardRoute)}>
       <div className='rounded-lg w-full h-44 xl:h-[218px] overflow-hidden'>
-        <img src={imageSrc} alt={`${title}_img`} className='w-full h-full object-fit rounded-lg transition-all duration-300 group-hover:scale-[1.2]' />
+        <img src={imageSrc} alt={`${title}_img`} className='w-full h-full object-cover rounded-lg transition-all duration-300 group-hover:scale-[1.2]' />
       </div>
       <div className='mt-6 xl:mt-5'>
         <h4 className={`font-links text-lg xl:text-base font-medium text-primary truncate group-hover:underline ${titleRight ? "text-right" : ""}`}>{capitalizeWords(title)}</h4>
