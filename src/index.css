@@ -1,81 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* For applying custom css */
-@layer base{
-  body{
+@layer base {
+  body {
     @apply font-body bg-bodyColor overflow-x-hidden w-screen h-screen;
-  } 
+  }
 
-  html{
+  html {
     @apply scroll-smooth;
   }
 
-  .flexVerCenter{
+  .flexVerCenter {
     @apply flex items-center;
   }
 
-  .footerLinks{
-    @apply text-grayText text-sm xl:text-xs lg:text-[10px] font-normal transition-all ease-in hover:text-white ;
+  .footerLinks {
+    @apply text-grayText text-sm xl:text-xs lg:text-[10px] font-normal transition-all ease-in hover:text-white;
   }
 
-  .footerHeadings{
+  .footerHeadings {
     @apply text-[#F2F2F2] text-lg xl:text-base lg:text-sm font-medium whitespace-nowrap;
   }
-  .subHeading{
+  .subHeading {
     @apply text-[40px] xl:text-4xl font-medium text-primary;
   }
-  .cardShadow{
+  .cardShadow {
     @apply shadow-[0px_0px_10px_0px_rgba(0,0,0,0.25)];
   }
-  .searchShadow{
-    @apply shadow-[0px_4px_8px_0px_rgba(0,0,0,0.25)] ;
+  .searchShadow {
+    @apply shadow-[0px_4px_8px_0px_rgba(0,0,0,0.25)];
   }
-  .pageShadow{
+  .pageShadow {
     @apply shadow-[0px_0px_4px_0px_rgba(0,0,0,0.50)];
   }
-  .paragraphBody{
+  .paragraphBody {
     @apply text-base xl:text-sm font-light text-justify;
   }
-  .sectionHeading{
+  .sectionHeading {
     @apply text-2xl xl:text-[22px] font-medium text-primary;
   }
-  .subSectionHeading{
+  .subSectionHeading {
     @apply text-xl xl:text-lg font-medium text-primary;
   }
-  .generalLink{
+  .generalLink {
     @apply font-links text-sm text-extraLightText font-medium;
   }
-  .generalLinkHover{
+  .generalLinkHover {
     @apply hover:text-black hover:border-b-2 hover:border-black;
+  }
+
+  ._contactShadow {
+    @apply shadow-[1px_3px_4px_0px_rgba(57,54,238,0.25)] backdrop-blur-[100px];
   }
   ._a4-paper {
     /*
     * Actual dimension of the A4 paper on the screen...
     width: 21cm;
     height: 29.7cm; */
-   
+
     --width: 33cm;
     --ratio: 1.41428571429;
     max-width: 100%;
     width: var(--width);
     /* height: calc(var(--ratio) * var(--width)); */
     background: white;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
     margin: 24px auto;
     padding: 1in;
   }
 }
 
-._article_column{
+._article_column {
   column-count: 2;
   /* column-fill: auto; */
   column-gap: 32px;
 }
-
 
 /* This one overrides the tailwind classes */
 @layer utilities {

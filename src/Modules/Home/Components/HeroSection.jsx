@@ -15,7 +15,7 @@ const HeroSection = () => {
                     <h2 className='text-white text-[84px] xl:text-[70px] font-bold leading-snug'> <span className='text-accent'>Explore </span>Human Ideas</h2>
                     <button
                         onClick={() => (navigate(`/blogs/${latestBlogChapter}/${latestBlogID}`))}
-                        className='w-[196px] h-[66px] mt-16 xl:w-[162px] xl:h-[55px] xl:mt-[50px] rounded-full bg-accent font-links font-normal text-xl xl:text-lg text-bodyColor'>
+                        className='w-[196px] h-[66px] mt-16 xl:w-[162px] xl:h-[55px] xl:mt-[50px] rounded-full bg-accent font-links font-normal text-xl xl:text-lg text-bodyColor hover:tracking-wider transition-all duration-200'>
                         Start Reading
                     </button>
                 </div>
