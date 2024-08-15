@@ -9,7 +9,6 @@ import {
     ArticlesSubjectPage, 
     ArticlesChaptersPage,
     ArticlesContentPage,
-    AOI, 
     Contact 
 } from '../Modules/index.js';
 
@@ -76,12 +75,6 @@ export const routerPaths = [
     },
     {
         "id": "5",
-        "name": "aoi",
-        "path": 'aoi',
-        "component": AOI,
-    },
-    {
-        "id": "6",
         "name": "contact",
         "path": 'contact',
         "component": Contact,

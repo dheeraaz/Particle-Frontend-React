@@ -22,11 +22,6 @@ export const navLinks = [
     },
     {
         "id": 5,
-        "name": "aoi",
-        "path": '/aoi',
-    },
-    {
-        "id": 6,
         "name": "contact",
         "path": '/contact',
     },
