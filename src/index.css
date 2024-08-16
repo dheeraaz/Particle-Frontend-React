@@ -26,7 +26,7 @@
     @apply text-[#F2F2F2] text-lg xl:text-base lg:text-sm font-medium whitespace-nowrap;
   }
   .subHeading {
-    @apply text-[40px] xl:text-4xl font-medium text-primary;
+    @apply text-[40px] xl:text-4xl lg:text-2xl md:text-xl sm:text-lg font-medium text-primary;
   }
   .cardShadow {
     @apply shadow-[0px_0px_10px_0px_rgba(0,0,0,0.25)];
@@ -83,6 +83,6 @@
 /* This one overrides the tailwind classes */
 @layer utilities {
   .container {
-    @apply max-w-7xl w-[96%] mx-auto xl:max-w-[1160px] lg:max-w-[924px] md:px-2 md:py-1;
+    @apply max-w-7xl w-[96%] mx-auto xl:max-w-[1160px] lg:max-w-[924px] md:max-w-[696px] sm:max-w-[580px] md:px-2 md:py-1;
   }
 }

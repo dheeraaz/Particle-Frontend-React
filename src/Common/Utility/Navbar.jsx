@@ -6,10 +6,12 @@ const MyNavlinksCallback = ({ isActive }) => {
   return ` hover:text-accent ${isActive ? "text-accent" : "text-bodyColor"}`
 }
 
-const Navbar = () => {
+const Navbar = ({toggleMenu}) => {
   return (
-    <nav>
-      <div className='font-links flex gap-5 xl:gap-4 lg:gap-3 font-medium text-base xl:text-sm lg:text-xs md:hidden'>
+    <nav 
+    className={`font-links flex gap-5 xl:gap-4 lg:gap-3 font-medium text-base xl:text-sm lg:text-xs ${toggleMenu?"md:hidden":"md:block md:py-10 md:z-50 md:absolute md:top-[60px] md:right-0 md:w-1/2 md:h-fit md:bg-primary"}`}>
+      {/* <div className='font-links flex gap-5 xl:gap-4 lg:gap-3 font-medium text-base xl:text-sm lg:text-xs md:hidden'> */}
+      <div className={`font-links flex gap-5 xl:gap-4 lg:gap-3 font-medium text-base xl:text-sm lg:text-xs ${toggleMenu?"":"md:flex-col md:justify-center md:items-center md:gap-10 md:text-base"}`}>
         {
           // Navbar link are imported from ./Constants/navLinks.js
           // configuring ./Constants/navLinks.js file will automatically sets Navbar link
