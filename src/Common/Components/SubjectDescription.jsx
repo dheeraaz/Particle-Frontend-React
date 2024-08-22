@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SubjectDescription = (props) => {
-    const {imgSrc, subjectTitle,  description="" } = props
+    const {imgSrc, subjectTitle,  description=[] } = props
   return (
     <section className='my-6 flex gap-16 xl:my-5 xl:gap-14 justify-between items-center'>
     <div className='w-[547px] h-[278px] xl:w-[496px] xl:h-[252px] rounded-lg'>
