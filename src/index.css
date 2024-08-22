@@ -76,7 +76,6 @@
 
 ._article_column {
   column-count: 2;
-  /* column-fill: auto; */
   column-gap: 32px;
 }
 
@@ -86,3 +85,4 @@
     @apply max-w-7xl w-[96%] mx-auto xl:max-w-[1160px] lg:max-w-[924px] md:px-2 md:py-1;
   }
 }
+
