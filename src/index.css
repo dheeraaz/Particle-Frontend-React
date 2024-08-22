@@ -72,13 +72,17 @@
     margin: 24px auto;
     padding: 1in;
   }
+
+  ._article_column {
+    column-count: 2;
+    /* column-fill: auto; */
+    column-gap: 32px;
+  }
+
+ 
 }
 
-._article_column {
-  column-count: 2;
-  /* column-fill: auto; */
-  column-gap: 32px;
-}
+
 
 /* This one overrides the tailwind classes */
 @layer utilities {
