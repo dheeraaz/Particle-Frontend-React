@@ -1,16 +1,14 @@
 import { 
     Home, 
-    BlogsSubjectPage, 
     BlogsChaptersPage, 
     BlogsContentPage, 
-    PapersSubjectPage, 
     PapersChaptersPage, 
     PapersContentPage, 
-    ArticlesSubjectPage, 
     ArticlesChaptersPage,
     ArticlesContentPage,
     Contact 
 } from '../Modules/index.js';
+import SubjectPage from '../Common/pages/SubjectPage.jsx';
 
 export const routerPaths = [
     {
@@ -23,7 +21,7 @@ export const routerPaths = [
         "id": "2",
         "name": "blogs",
         "path": 'blogs',
-        "component": BlogsSubjectPage,
+        "component": SubjectPage,
     },
     {
         "id": "2.1",
@@ -41,7 +39,7 @@ export const routerPaths = [
         "id": "3",
         "name": "papers",
         "path": 'papers',
-        "component": PapersSubjectPage,
+        "component": SubjectPage,
     },
     {
         "id": "3.1",
@@ -59,7 +57,7 @@ export const routerPaths = [
         "id": "4",
         "name": "articles",
         "path": 'articles',
-        "component": ArticlesSubjectPage,
+        "component": SubjectPage,
     },
     {
         "id": "4.1",
