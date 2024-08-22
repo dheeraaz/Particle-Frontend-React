@@ -75,9 +75,6 @@
     @apply lg:px-10 lg:py-16 sm:px-5 sm:py-10
   }
 
-._article_column {
-  column-count: 2;
-  column-gap: 32px;
   ._article_column {
     column-count: 2;
     /* column-fill: auto; */
@@ -87,8 +84,6 @@
   }
 
  
-}
-
 }
 
 
