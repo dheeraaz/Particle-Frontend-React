@@ -34,11 +34,11 @@ const ArticlesContentPage = () => {
                 <hr className='w-full h-[1px] mt-1 mb-6 border-extraLightText' />
 
                 {/* title and description */}
-                <h1 className='font-links text-5xl font-semibold leading-normal'>{capitalizeWords(singleArticle.title)}</h1>
-                <p className='text-[40px] font-normal'>{capitalizeWords(singleArticle?.body?.titleDesc)}</p>
+                <h1 className='font-links text-5xl md:text-4xl sm:text-3xl font-semibold leading-normal'>{capitalizeWords(singleArticle.title)}</h1>
+                <p className='text-[40px] md:text-3xl sm:text-2xl font-normal'>{capitalizeWords(singleArticle?.body?.titleDesc)}</p>
 
                 {/* article date */}
-                <div className='flexVerCenter gap-2 justify-end mt-6'>
+                <div className='flexVerCenter gap-2 justify-end mt-6 md:mt-4 sm:mt-2'>
                     <img src="/icons/date-icon.svg" alt="date_icon" />
                     <p className='text-sm xl:text-xs font-normal text-extraLightText'>{singleArticle?.createdAt}</p>
                 </div>

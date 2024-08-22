@@ -77,11 +77,11 @@ const BlogsContentPage = () => {
             <Breadcrumbs path={pathArray} />
             <div className='my-6 flex justify-between'>
                 {/* leftSide */}
-                <section className='w-[907px] pr-[105px] xl:w-[822px] xl:pr-[93px] border-r-[1px] border-extraLightText '>
+                <section className='w-[907px] pr-[105px] xl:w-[822px] xl:pr-[93px] border-r-[1px] border-extraLightText md:border-none md:pr-0 '>
                     <img src={singleBlog.heroImage} alt="hero_img" className='w-full max-h-[420px] xl:max-h-[394px] rounded-lg' />
 
                     {/* main heading */}
-                    <h2 className='mt-12 xl:mt-10 text-primary text-[40px] xl:text-4xl font-medium'>{capitalizeWords(singleBlog.title)}</h2>
+                    <h2 className='mt-12 xl:mt-10 text-primary text-[40px] sm:text-3xl xl:text-4xl font-medium'>{capitalizeWords(singleBlog.title)}</h2>
 
                     {/* read time section */}
                     <div className='flex gap-8 mb-10 xl:mb-8 xl:mt-2'>
@@ -127,7 +127,7 @@ const BlogsContentPage = () => {
 
                 </section>
                 {/* rightSide */}
-                <aside className='w-[373px]  pl-[41px] xl:w-[338px] xl:pl-[38px] h-fit sticky top-32 xl:top-28'>
+                <aside className='w-[373px]  pl-[41px] xl:w-[338px] xl:pl-[38px] h-fit sticky top-32 xl:top-28 md:hidden'>
                     {/* <h5 className='text-primary text-[32px] xl:text-[30px] font-medium mb-4'>{capitalizeWords('table of content')}</h5> */}
                     <h5 className='sectionHeading mb-4'>{capitalizeWords('table of content')}</h5>
                     {singleBlog.body.section.map((singleSec) => (
