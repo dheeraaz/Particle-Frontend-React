@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Logo, Navbar, RightNav } from '../Utility/index.js'
 
 
+
 const Header = () => {
   const [isScroll, setIsScroll] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(true);
 
   function handleScroll() {
     if(window.scrollY > 320){
@@ -25,8 +27,8 @@ const Header = () => {
     <header className={`flex items-center bg-primary transition-all ease-in-out h-24 xl:h-20 z-10 ${isScroll?('sticky top-0 shadow-lg'):('')}`}>
       <div className='container flexVerCenter justify-between'>
         <Logo />
-        <Navbar />
-        <RightNav />
+        <Navbar toggleMenu = {toggleMenu}/>
+        <RightNav toggleMenu = {toggleMenu} setToggleMenu={setToggleMenu}/>
       </div>
     </header>
   )
