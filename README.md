@@ -1,7 +1,7 @@
 # Particle-Frontend-React
 
 ## Project Overview
-**Particle** is the frontend of a fully responsive personal blog site, built with React.js. This project provides a dynamic and engaging platform for users to explore content across **multiple formats**, including **blogs**, **articles**, and **research papers**. Each content type has its own **unique layout** and navigation.
+**Particle** is the frontend of a **fully responsive** personal blog site, built with React.js. This project provides a dynamic and engaging platform for users to explore content across **multiple formats**, including **blogs**, **articles**, and **research papers**. Each content type has its own **unique layout** and navigation.
 
 ## Features
 - Responsive design
